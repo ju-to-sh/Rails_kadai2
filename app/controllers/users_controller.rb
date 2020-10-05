@@ -11,7 +11,6 @@ class UsersController < ApplicationController
 
   def create
     User.create(user_params)
-    redirect_to action: :index
   end
 
   def edit
@@ -19,12 +18,10 @@ class UsersController < ApplicationController
 
   def update
     @user.update(user_params)
-    redirect_to action: :index
   end
 
   def destroy
     @user.destroy
-    redirect_to action: :index
   end
 
   private
